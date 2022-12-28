@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AWA.MinApi.props" />
+</Project>
