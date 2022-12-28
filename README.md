@@ -291,6 +291,6 @@ _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/
 dotnet add AWA.DataAccess package Microsoft.EntityFrameworkCore.Design
 dotnet add AWA.DataAccess package Microsoft.EntityFrameworkCore.SqlServer
 
-dotnet ef dbcontext scaffold "Data Source=LAPTOP-89ED63S7\ELIO_SQL;Initial Catalog=WideWorldImporters; User Id=sa;Password=sa123" Microsoft.EntityFrameworkCore.SqlServer --project AWA.DataAccess --output-dir Models --context-dir Data --namespace AWA.Models --context-namespace AWA.DataAccess --context WideWorldImportersContext -f --no-onconfiguring
+dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=AdventureWorks2017; User Id=XXUser;Password=XXPWD;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer --project AWA.DataAccess --output-dir "AWA.Models\Models" --context-dir "AWA.DataAccess\Data" --namespace AWA.Models --context-namespace AWA.DataAccess --context AdventureWorksContext -f --no-onconfiguring
 dotnet tool install --global dotnet-ef
 dotnet tool update --global dotnet-ef 
