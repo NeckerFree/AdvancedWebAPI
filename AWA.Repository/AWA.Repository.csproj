@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AWA.DataAccess\AWA.DataAccess.csproj" />
+    <ProjectReference Include="..\AWA.Domain\AWA.Domain.csproj" />
+    <ProjectReference Include="..\AWA.Models\AWA.Models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -294,3 +294,9 @@ dotnet add AWA.DataAccess package Microsoft.EntityFrameworkCore.SqlServer
 dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=AdventureWorks2017; User Id=XXUser;Password=XXPWD;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer --project AWA.DataAccess --output-dir "AWA.Models\Models" --context-dir "AWA.DataAccess\Data" --namespace AWA.Models --context-namespace AWA.DataAccess --context AdventureWorksContext -f --no-onconfiguring
 dotnet tool install --global dotnet-ef
 dotnet tool update --global dotnet-ef 
+
+
+BusinessEntityContactRepository
+ContactTypeRepository
+PersonRepository
+EmailAddressRepository

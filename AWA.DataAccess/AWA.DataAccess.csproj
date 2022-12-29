@@ -18,4 +18,8 @@
     <Folder Include="Data\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AWA.Models\AWA.Models.csproj" />
+  </ItemGroup>
+
 </Project>
