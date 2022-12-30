@@ -79,3 +79,4 @@ C:\Elio\Development\Projects\AdvancedWebAPI\AWA.MinApi\bin\Debug\net7.0\AWA.Serv
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.MinApi\bin\Debug\net7.0\AWA.DataAccess.pdb
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.MinApi\bin\Debug\net7.0\AWA.Domain.pdb
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.MinApi\bin\Debug\net7.0\AWA.Models.pdb
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.MinApi\bin\Debug\net7.0\Newtonsoft.Json.dll
