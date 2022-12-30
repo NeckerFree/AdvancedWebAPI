@@ -1,6 +1,10 @@
 using AWA.Repository;
 using AWA.Services;
 using AWA.Services.Interfaces;
+using Azure;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,8 +29,22 @@ app.UseHttpsRedirection();
 app.MapGet("/getAllPeople", async (IPersonService personService) =>
 {
   return await personService.GetAllPeople();
-}); 
-
+});
+app.MapGet("/getPagedPeople", (HttpContext http,  IPersonService personService, [AsParameters] PersonParameters personParameters) =>
+{
+    var pagedPeople= personService.GetPagedPeople(personParameters);
+    var metadata = new
+    {
+        pagedPeople.TotalCount,
+        pagedPeople.PageSize,
+        pagedPeople.CurrentPage,
+        pagedPeople.TotalPages,
+        pagedPeople.HasNext,
+        pagedPeople.HasPrevious
+    };
+    http.Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+    return pagedPeople;
+});
 
 
 app.Run();
