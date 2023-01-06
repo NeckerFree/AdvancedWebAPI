@@ -1,8 +1,3 @@
-C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.csproj.AssemblyReference.cache
-C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.GeneratedMSBuildEditorConfig.editorconfig
-C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.AssemblyInfoInputs.cache
-C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.AssemblyInfo.cs
-C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.csproj.CoreCompileInputs.cache
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\bin\Debug\net7.0\AWA.Repository.deps.json
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\bin\Debug\net7.0\AWA.Repository.dll
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\bin\Debug\net7.0\AWA.Repository.pdb
@@ -12,6 +7,11 @@ C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\bin\Debug\net7.0\AWA.
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\bin\Debug\net7.0\AWA.DataAccess.pdb
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\bin\Debug\net7.0\AWA.Domain.pdb
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\bin\Debug\net7.0\AWA.Models.pdb
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.csproj.AssemblyReference.cache
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.AssemblyInfoInputs.cache
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.AssemblyInfo.cs
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.csproj.CoreCompileInputs.cache
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.csproj.CopyComplete
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\AWA.Repository.dll
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Repository\obj\Debug\net7.0\refint\AWA.Repository.dll

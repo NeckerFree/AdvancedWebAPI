@@ -15,18 +15,22 @@ namespace AWA.Repository
         public IPersonRepository People { get; }
 
         public IEmailAddressRepository EmailAddresses { get; }
+
+        public IEmployeeRepository Employees { get; }
+
         public UnitOfWork(AdventureWorksContext dbContext,
                             IBusinessEntityContactRepository businessEntityContactRepository,
                             IContactTypeRepository contactTypeRepository,
                             IPersonRepository personRepository,
-                            IEmailAddressRepository emailAddressRepository)
+                            IEmailAddressRepository emailAddressRepository,
+                            IEmployeeRepository employee)
         {
             this._dbContext = dbContext;
             this.BusinessEntityContacts = businessEntityContactRepository;
             this.ContactTypes = contactTypeRepository;
             this.People = personRepository;
             this.EmailAddresses = emailAddressRepository;
-
+            this.Employees = employee;
         }
 
         public int Complete()

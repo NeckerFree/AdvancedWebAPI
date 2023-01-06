@@ -6,6 +6,7 @@
         IContactTypeRepository ContactTypes { get; }
         IPersonRepository People { get; }
         IEmailAddressRepository EmailAddresses { get; }
+        IEmployeeRepository Employees { get; }
         int Complete();
     }
 }

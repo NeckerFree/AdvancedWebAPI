@@ -300,3 +300,8 @@ BusinessEntityContactRepository
 ContactTypeRepository
 PersonRepository
 EmailAddressRepository
+
+https://code-maze.com/paging-aspnet-core-webapi/
+https://code-maze.com/filtering-aspnet-core-webapi/
+https://code-maze.com/searching-aspnet-core-webapi/
+https://code-maze.com/sorting-aspnet-core-webapi/
