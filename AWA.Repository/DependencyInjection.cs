@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace AWA.Repository
 {
-    public static class DependencyInjection
+    public static class DependencyInjection 
     {
         public static IServiceCollection AddDIServices(this IServiceCollection services, string connectionString)
         {
@@ -21,11 +21,12 @@ namespace AWA.Repository
             });
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             //services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddTransient<IBusinessEntityContactRepository, BusinessEntityContactRepository>();
-            services.AddTransient<IContactTypeRepository, ContactTypeRepository>();
+            //services.AddTransient<IBusinessEntityContactRepository, BusinessEntityContactRepository>();
+            //services.AddTransient<IContactTypeRepository, ContactTypeRepository>();
             services.AddTransient<IEmailAddressRepository, EmailAddressRepository>();
             services.AddTransient<IPersonRepository, PersonRepository>();
-            
+            services.AddTransient<IEmployeeRepository, EmployeeRepository>();
+
             return services;
         }
     }

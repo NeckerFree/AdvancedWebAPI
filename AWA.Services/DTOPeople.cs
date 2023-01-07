@@ -3,7 +3,6 @@
     public class DTOPeople
     {
         public int BusinessEntityId { get; internal set; }
-        public string? Name { get; internal set; }
         public string? Title { get; internal set; }
         public string? FirstName { get; internal set; }
         public string? LastName { get; internal set; }
