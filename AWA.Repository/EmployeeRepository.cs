@@ -4,7 +4,7 @@ using AWA.Models;
 
 namespace AWA.Repository
 {
-    internal class EmployeeRepository : GenericRepository<Employee>, IEmployeeRepository
+    public class EmployeeRepository : GenericRepository<Employee>, IEmployeeRepository
     {
         public EmployeeRepository(AdventureWorksContext context) : base(context)
         {
