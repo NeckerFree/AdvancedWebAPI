@@ -28,7 +28,7 @@ app.MapGet("/getAllPeople", async (IPersonService personService) =>
 {
     return await personService.GetAllPeople();
 });
-app.MapGet("/getPagedPeople", (HttpContext http, IPersonService personService, [AsParameters] PersonParameters personParameters) =>
+app.MapGet("/getAdvancedPeople", (HttpContext http, IPersonService personService, [AsParameters] PersonParameters personParameters) =>
 {
     if (!personParameters.ValidYearRange)
     {

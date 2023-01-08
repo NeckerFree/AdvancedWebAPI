@@ -14,8 +14,6 @@ namespace AWA.Services
         }
         public async Task<IEnumerable<DTOPeople>> GetAllPeople()
         {
-            //var businessEntityContact = await _unitOfWork.BusinessEntityContacts.GetAll();
-            //var contactType = await _unitOfWork.ContactTypes.GetAll();
             var people = await _unitOfWork.People.GetAll();
             var emailAddress = await _unitOfWork.EmailAddresses.GetAll();
             var employees = await _unitOfWork.Employees.GetAll();
@@ -30,7 +28,8 @@ namespace AWA.Services
                               LastName = p.LastName,
                               EmailAddress = e.EmailAddress1,
                               BirthDate = em.BirthDate,
-                              JobTitle = em.JobTitle
+                              JobTitle = em.JobTitle,
+                              FullName = $"{p.FirstName} {p.LastName}"
                           }
                           );
             return result;
@@ -40,10 +39,27 @@ namespace AWA.Services
 
         public PagedList<DTOPeople> GetPagedPeople(PersonParameters personParameters)
         {
-            var allPeople = GetAllPeople().Result.AsQueryable<DTOPeople>()
-                 .Where(o => o.BirthDate.Year >= personParameters.MinYearOfBirth && o.BirthDate.Year <= personParameters.MaxYearOfBirth)
-                 .OrderBy(so => so.FirstName);
+            var allPeople = GetAllPeople().Result.AsQueryable<DTOPeople>().OrderBy(so => so.FullName);
+            if (personParameters.MinYearOfBirth != null && personParameters.MaxYearOfBirth != null)
+            {
+                allPeople = (IOrderedQueryable<DTOPeople>)allPeople
+                    .Where(o => o.BirthDate.Year >= personParameters.MinYearOfBirth && o.BirthDate.Year <= personParameters.MaxYearOfBirth);
+            }
+            SearchPeople(ref allPeople, personParameters.Name, personParameters.JobTitle);
             return PagedList<DTOPeople>.ToPagedList(allPeople, personParameters.PageNumber, personParameters.PageSize);
+        }
+
+        private void SearchPeople(ref IOrderedQueryable<DTOPeople> allPeople, string? name, string? jobTitle)
+        {
+            if (allPeople.Any() == false) return;
+            if (string.IsNullOrWhiteSpace(name) && string.IsNullOrWhiteSpace(jobTitle)) return;
+            allPeople = ((IOrderedQueryable<DTOPeople>)(
+                from ap in allPeople
+                where (
+                (string.IsNullOrWhiteSpace(ap.FullName) || string.IsNullOrWhiteSpace(name) || ap.FullName.ToLower().Contains(name.Trim().ToLower())) &&
+                (string.IsNullOrWhiteSpace(ap.JobTitle) || string.IsNullOrWhiteSpace(jobTitle) || ap.JobTitle.ToLower().Contains(jobTitle.Trim().ToLower())))
+                select ap));
+
         }
     }
 }

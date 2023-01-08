@@ -9,5 +9,6 @@
         public string? EmailAddress { get; internal set; }
         public DateTime BirthDate { get; internal set; }
         public string? JobTitle { get; internal set; }
+        public string? FullName { get; internal set; } = null;
     }
 }
