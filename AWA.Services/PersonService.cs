@@ -42,13 +42,14 @@ namespace AWA.Services
         public PagedList<DTOPeople> GetPagedPeople(PersonParameters personParameters)
         {
             var allPeople = GetAllPeople().Result.AsQueryable<DTOPeople>();
-            var allPeopleSorted = OrderPeople(allPeople, personParameters.OrderBy);
+            
             if (personParameters.MinYearOfBirth != null && personParameters.MaxYearOfBirth != null)
             {
-                allPeopleSorted = (IOrderedQueryable<DTOPeople>)allPeopleSorted
+                allPeople = (IOrderedQueryable<DTOPeople>)allPeople
                     .Where(o => o.BirthDate.Year >= personParameters.MinYearOfBirth && o.BirthDate.Year <= personParameters.MaxYearOfBirth);
             }
-            SearchPeople(allPeopleSorted, personParameters.Name, personParameters.JobTitle);
+            SearchPeople(allPeople, personParameters.Name, personParameters.JobTitle);
+            var allPeopleSorted = OrderPeople(allPeople, personParameters.OrderBy);
             return PagedList<DTOPeople>.ToPagedList(allPeople, personParameters.PageNumber, personParameters.PageSize);
         }
 
@@ -77,20 +78,24 @@ namespace AWA.Services
                 var sortField = objectProperty.Name.ToString();
                 if (!string.IsNullOrWhiteSpace(sortField))
                 {
-                    var sortFieldOrder = $"{sortField} {sortingOrder}";
-                    allPeopleOrdered = allPeopleOrdered.OrderBy(p => sortFieldOrder);
+                    //var sortFieldOrder = $"{sortField} {sortingOrder}";
+
+                    allPeopleOrdered = //orderParam.EndsWith(" desc") ? 
+                        allPeopleOrdered.OrderByDescending((p => objectProperty.GetValue(p, null)));
+                        //: allPeopleOrdered.OrderBy((p => objectProperty.GetValue(p, null)));
                 }
             }
+            
             return allPeopleOrdered;
             
         }
 
 
-        private void SearchPeople(IOrderedQueryable<DTOPeople> allPeople, string? name, string? jobTitle)
+        private void SearchPeople(IQueryable<DTOPeople> allPeople, string? name, string? jobTitle)
         {
             if (allPeople.Any() == false) return;
             if (string.IsNullOrWhiteSpace(name) && string.IsNullOrWhiteSpace(jobTitle)) return;
-            allPeople = ((IOrderedQueryable<DTOPeople>)(
+            allPeople = ((IQueryable<DTOPeople>)(
                 from ap in allPeople
                 where (
                 (string.IsNullOrWhiteSpace(ap.FullName) || string.IsNullOrWhiteSpace(name) || ap.FullName.ToLower().Contains(name.Trim().ToLower())) &&
