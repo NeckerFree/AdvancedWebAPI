@@ -1,6 +1,8 @@
 ﻿using AWA.Domain.Interfaces;
 using AWA.Models;
 using AWA.Services.Interfaces;
+using System.Reflection;
+using System.Text;
 
 namespace AWA.Services
 {
@@ -39,17 +41,52 @@ namespace AWA.Services
 
         public PagedList<DTOPeople> GetPagedPeople(PersonParameters personParameters)
         {
-            var allPeople = GetAllPeople().Result.AsQueryable<DTOPeople>().OrderBy(so => so.FullName);
+            var allPeople = GetAllPeople().Result.AsQueryable<DTOPeople>();
+            var allPeopleSorted = OrderPeople(allPeople, personParameters.OrderBy);
             if (personParameters.MinYearOfBirth != null && personParameters.MaxYearOfBirth != null)
             {
-                allPeople = (IOrderedQueryable<DTOPeople>)allPeople
+                allPeopleSorted = (IOrderedQueryable<DTOPeople>)allPeopleSorted
                     .Where(o => o.BirthDate.Year >= personParameters.MinYearOfBirth && o.BirthDate.Year <= personParameters.MaxYearOfBirth);
             }
-            SearchPeople(ref allPeople, personParameters.Name, personParameters.JobTitle);
+            SearchPeople(allPeopleSorted, personParameters.Name, personParameters.JobTitle);
             return PagedList<DTOPeople>.ToPagedList(allPeople, personParameters.PageNumber, personParameters.PageSize);
         }
 
-        private void SearchPeople(ref IOrderedQueryable<DTOPeople> allPeople, string? name, string? jobTitle)
+        private IOrderedQueryable<DTOPeople> OrderPeople(IQueryable<DTOPeople> allPeople, string orderBy)
+        {
+            IOrderedQueryable < DTOPeople > allPeopleOrdered= (IOrderedQueryable<DTOPeople>)allPeople;
+            if (!allPeople.Any())
+            {
+                return allPeopleOrdered;
+            }
+            if (string.IsNullOrWhiteSpace(orderBy))
+            {
+                allPeopleOrdered.OrderBy(p => p.FullName);
+                return allPeopleOrdered;
+            }
+            var orderParameters = orderBy.Trim().Split(',');
+            var propertyInfos = typeof(DTOPeople).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            var orderQueryBuilder = new StringBuilder();
+            foreach (var orderParam in orderParameters)
+            {
+                if (string.IsNullOrWhiteSpace(orderParam)) continue;
+                var propertyQuery = orderParam.Split(' ')[0];
+                var objectProperty = propertyInfos.FirstOrDefault(pi => pi.Name.Equals(propertyQuery, StringComparison.InvariantCultureIgnoreCase));
+                if (objectProperty == null)                   continue;
+                var sortingOrder = orderParam.EndsWith(" desc") ? "descending" : "ascending";
+                var sortField = objectProperty.Name.ToString();
+                if (!string.IsNullOrWhiteSpace(sortField))
+                {
+                    var sortFieldOrder = $"{sortField} {sortingOrder}";
+                    allPeopleOrdered = allPeopleOrdered.OrderBy(p => sortFieldOrder);
+                }
+            }
+            return allPeopleOrdered;
+            
+        }
+
+
+        private void SearchPeople(IOrderedQueryable<DTOPeople> allPeople, string? name, string? jobTitle)
         {
             if (allPeople.Any() == false) return;
             if (string.IsNullOrWhiteSpace(name) && string.IsNullOrWhiteSpace(jobTitle)) return;

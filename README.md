@@ -296,10 +296,6 @@ dotnet tool install --global dotnet-ef
 dotnet tool update --global dotnet-ef 
 
 
-BusinessEntityContactRepository
-ContactTypeRepository
-PersonRepository
-EmailAddressRepository
 
 https://code-maze.com/paging-aspnet-core-webapi/
 https://code-maze.com/filtering-aspnet-core-webapi/
