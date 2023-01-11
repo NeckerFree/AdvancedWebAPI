@@ -20,9 +20,6 @@ namespace AWA.Repository
                 options.UseSqlServer(connectionString);
             });
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            //services.AddScoped<IProductRepository, ProductRepository>();
-            //services.AddTransient<IBusinessEntityContactRepository, BusinessEntityContactRepository>();
-            //services.AddTransient<IContactTypeRepository, ContactTypeRepository>();
             services.AddTransient<IEmailAddressRepository, EmailAddressRepository>();
             services.AddTransient<IPersonRepository, PersonRepository>();
             services.AddTransient<IEmployeeRepository, EmployeeRepository>();
