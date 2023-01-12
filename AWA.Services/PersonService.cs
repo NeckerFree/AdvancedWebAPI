@@ -1,6 +1,6 @@
 ﻿using AWA.Domain.Interfaces;
-using AWA.Models;
 using AWA.Services.Interfaces;
+using System.Linq.Dynamic.Core;
 using System.Reflection;
 using System.Text;
 
@@ -42,28 +42,26 @@ namespace AWA.Services
         public PagedList<DTOPeople> GetPagedPeople(PersonParameters personParameters)
         {
             var allPeople = GetAllPeople().Result.AsQueryable<DTOPeople>();
-            
+
             if (personParameters.MinYearOfBirth != null && personParameters.MaxYearOfBirth != null)
             {
-                allPeople = (IOrderedQueryable<DTOPeople>)allPeople
-                    .Where(o => o.BirthDate.Year >= personParameters.MinYearOfBirth && o.BirthDate.Year <= personParameters.MaxYearOfBirth);
+                allPeople = allPeople.Where(o => o.BirthDate.Year >= personParameters.MinYearOfBirth && o.BirthDate.Year <= personParameters.MaxYearOfBirth);
             }
-            SearchPeople(allPeople, personParameters.Name, personParameters.JobTitle);
-            var allPeopleSorted = OrderPeople(allPeople, personParameters.OrderBy);
+            SearchPeople(ref allPeople, personParameters.Name, personParameters.JobTitle);
+            OrderPeople(ref allPeople, personParameters.OrderBy);
             return PagedList<DTOPeople>.ToPagedList(allPeople, personParameters.PageNumber, personParameters.PageSize);
         }
 
-        private IOrderedQueryable<DTOPeople> OrderPeople(IQueryable<DTOPeople> allPeople, string orderBy)
+        private void OrderPeople(ref IQueryable<DTOPeople> allPeople, string? orderBy)
         {
-            IOrderedQueryable < DTOPeople > allPeopleOrdered= (IOrderedQueryable<DTOPeople>)allPeople;
             if (!allPeople.Any())
             {
-                return allPeopleOrdered;
+                return;
             }
             if (string.IsNullOrWhiteSpace(orderBy))
             {
-                allPeopleOrdered.OrderBy(p => p.FullName);
-                return allPeopleOrdered;
+                allPeople.OrderBy(p => p.FullName);
+                return;
             }
             var orderParameters = orderBy.Trim().Split(',');
             var propertyInfos = typeof(DTOPeople).GetProperties(BindingFlags.Public | BindingFlags.Instance);
@@ -71,27 +69,19 @@ namespace AWA.Services
             foreach (var orderParam in orderParameters)
             {
                 if (string.IsNullOrWhiteSpace(orderParam)) continue;
-                var propertyQuery = orderParam.Split(' ')[0];
+                var propertyQuery = orderParam.Trim().Split(" ")[0];
                 var objectProperty = propertyInfos.FirstOrDefault(pi => pi.Name.Equals(propertyQuery, StringComparison.InvariantCultureIgnoreCase));
-                if (objectProperty == null)                   continue;
+                if (objectProperty == null) continue;
                 var sortingOrder = orderParam.EndsWith(" desc") ? "descending" : "ascending";
-                var sortField = objectProperty.Name.ToString();
-                if (!string.IsNullOrWhiteSpace(sortField))
-                {
-                    //var sortFieldOrder = $"{sortField} {sortingOrder}";
-
-                    allPeopleOrdered = //orderParam.EndsWith(" desc") ? 
-                        allPeopleOrdered.OrderByDescending((p => objectProperty.GetValue(p, null)));
-                        //: allPeopleOrdered.OrderBy((p => objectProperty.GetValue(p, null)));
-                }
+                orderQueryBuilder.Append($"{objectProperty.Name.ToString()} {sortingOrder}, ");
             }
-            
-            return allPeopleOrdered;
-            
+            var orderQuery = orderQueryBuilder.ToString().TrimEnd(',', ' ');
+            allPeople = allPeople.OrderBy(orderQuery);
+            return;
         }
 
 
-        private void SearchPeople(IQueryable<DTOPeople> allPeople, string? name, string? jobTitle)
+        private void SearchPeople(ref IQueryable<DTOPeople> allPeople, string? name, string? jobTitle)
         {
             if (allPeople.Any() == false) return;
             if (string.IsNullOrWhiteSpace(name) && string.IsNullOrWhiteSpace(jobTitle)) return;
