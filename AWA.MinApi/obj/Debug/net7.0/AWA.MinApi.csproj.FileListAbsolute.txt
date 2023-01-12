@@ -80,3 +80,4 @@ C:\Elio\Development\Projects\AdvancedWebAPI\AWA.MinApi\obj\Debug\net7.0\refint\A
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.MinApi\obj\Debug\net7.0\AWA.MinApi.pdb
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.MinApi\obj\Debug\net7.0\AWA.MinApi.genruntimeconfig.cache
 C:\Elio\Development\Projects\AdvancedWebAPI\AWA.MinApi\obj\Debug\net7.0\ref\AWA.MinApi.dll
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.MinApi\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll

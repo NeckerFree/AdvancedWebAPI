@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gXDyhBHdpkkkvy1fulFi8ktoI2yTEitcpynKUaIn9nHa/P4X6uhenWfKzx9Q20/MnB0t5MMJ0/IriiP90k4PmQ==",
+  "dgSpecHash": "i+uguftc2T2zoLTivjsuQrxf50ABNzoi3faxhj6YG1JrS4GwNxn0ggJwwaZ7rEfYbkHbcea4xHlc0ymT8Iwptw==",
   "success": true,
   "projectFilePath": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.MinApi\\AWA.MinApi.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "C:\\Users\\elio_\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.21.0\\system.identitymodel.tokens.jwt.6.21.0.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\elio_\\.nuget\\packages\\system.linq.dynamic.core\\1.2.24\\system.linq.dynamic.core.1.2.24.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
