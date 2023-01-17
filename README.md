@@ -23,12 +23,44 @@
 
 # 📖 AdvancedWebAPI <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-*AdvancedWebAPI** is a .NET Solution that uses a layer architecture to expose a minimal Web API 
+*AdvancedWebAPI* is a .NET Solution that uses a layer architecture to expose a minimal Web API 
 and to validate advanced data recovery using paging, filtering, searching and sorting.
 
-# Web API Service Images:
+# Web API Service:
+
+## DTO Schema:
+![DTO Schema](https://user-images.githubusercontent.com/8497300/212795992-d4e9977b-1cc2-4100-9882-51c7f338142e.png)
+
+## getAllPeople Method:
+![01](https://user-images.githubusercontent.com/8497300/212795860-4446485a-e7c6-43af-9b64-abd4b6ca094a.png)
+
+## getAdvancedPeople Method:
+### Paging:
+![Paging](https://user-images.githubusercontent.com/8497300/212796101-1ad6c6df-c560-47d7-96f1-248b89a9a18a.png)
+
+### Paging Header:
+![Paging Response Header](https://user-images.githubusercontent.com/8497300/212796227-e74d418a-91c7-4f12-8ac8-c27920416f9c.png)
+
+### Paging in Postman:
+![Paging Postman](https://user-images.githubusercontent.com/8497300/212796141-5899c960-2d28-4a74-b5c7-fe1bf214b411.png)
+
+### Filtering:
+![Filtering](https://user-images.githubusercontent.com/8497300/212796372-e72f8c71-0e2f-4a56-8bd9-c4858f6eb345.png)
+
+### Filtering in Postman:
+![Filtering Postman](https://user-images.githubusercontent.com/8497300/212796428-cabd41d8-91bb-454d-a0db-316996691e91.png)
+
+### Searching:
+![Searching](https://user-images.githubusercontent.com/8497300/212796554-3c6aa3f9-6fd1-4de7-b74e-adb38bb15e91.png)
+
+### Searching in Postman:
+![Searching Postman](https://user-images.githubusercontent.com/8497300/212796589-624693b2-9409-44b9-8469-4d2fa89aca71.png)
+
+## Sorting:
+![Sorting](https://user-images.githubusercontent.com/8497300/212796661-c7261b3e-06eb-4245-a536-65065df61068.png)
+
+### Sorting in Postman:
+![Sorting Postman](https://user-images.githubusercontent.com/8497300/212796630-53a822b7-f87f-495c-8903-24213848a607.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,8 +85,6 @@ and to validate advanced data recovery using paging, filtering, searching and so
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
 
 - **EF Core Database First**
 - **Unit of Wokt and Repository Pattern**
@@ -101,7 +131,9 @@ Install this project with:
 
 To run the project, 
 
-Start the application (F5), the /swagger/index.html page is displayed
+- Start the application (F5) 
+
+- The /swagger/index.html page is displayed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
