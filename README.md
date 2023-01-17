@@ -1,39 +1,5 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -42,17 +8,12 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ (OPTIONAL)](#faq)
@@ -60,36 +21,32 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 AdvancedWebAPI <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+*AdvancedWebAPI** is a .NET Solution that uses a layer architecture to expose a minimal Web API 
+and to validate advanced data recovery using paging, filtering, searching and sorting.
+
+# Web API Service Images:
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
+.NET Core Minimal API, 
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis">Minimal API</a></li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://www.microsoft.com/en-US/download/details.aspx?id=101064">SQL Server</a></li>
   </ul>
 </details>
 
@@ -99,19 +56,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- **EF Core Database First**
+- **Unit of Wokt and Repository Pattern**
+- **Services Dependency Injection**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,83 +66,42 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
+To get a local copy up and running, follow these steps:
 
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+- Visual Studio .NET 2022 updated to use NET Core 7
+- SQL Server Database 
 
 ### Setup
 
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
+1. Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/NeckerFree/AdvancedWebAPI
 ```
---->
 
+2. Download and restore the Adventure Works Database according to your SQL Server version
+[Adventure Works DB](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+
+3. Create a User as db_owner of this batabase
+
+4. Modify the connection string (AdventureWorksConnection) in the file \AWA.MinApi\appsettings.json to point your database
 ### Install
 
 Install this project with:
+1. Build the solution and assure that doesn't have errors
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+2. Set the project AWA.MinApi as default 
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, 
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+Start the application (F5), the /swagger/index.html page is displayed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,31 +109,12 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Elio Cortés**
 
-👤 **Author1**
+- GitHub: [@NeckerFree](https://github.com/NeckerFree)
+- Twitter: [@ElioCortesM](https://twitter.com/ElioCortesM)
+- LinkedIn: [elionelsoncortes](https://www.linkedin.com/in/elionelsoncortes/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,19 +132,18 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project please start my project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+## 🙏 Acknowledgments and references <a name="acknowledgements"></a>
+This project is based on the articles published by Code Maze:
+[Paging](https://code-maze.com/paging-aspnet-core-webapi)
+[Filtering](https://code-maze.com/filtering-aspnet-core-webapi)
+[Searching](https://code-maze.com/searching-aspnet-core-webapi)
+[Sorting](https://code-maze.com/sorting-aspnet-core-webapi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -265,15 +151,20 @@ I would like to thank...
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+- **What command are required to Scaffold from Scratch a DB First?**
 
-- **[Question_1]**
+  - Run next commands:
+  ```
+    dotnet add AWA.DataAccess package Microsoft.EntityFrameworkCore.Design
+    dotnet add AWA.DataAccess package Microsoft.EntityFrameworkCore.SqlServer
 
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+    dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=AdventureWorks2017; User Id=XXUser;Password=XXPWD;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer --project AWA.DataAccess --output-dir "AWA.Models\Models" --context-dir "AWA.DataAccess\Data" --namespace AWA.Models --context-namespace AWA.DataAccess --context AdventureWorksContext -f --no-onconfiguring
+    dotnet tool install --global dotnet-ef
+    dotnet tool update --global dotnet-ef 
+  ```
+- **How to Implement Unit Of Work and Generic Repository pattern?**
+   - [Unit Of Work And Generic Repository pattern](https://www.c-sharpcorner.com/article/implement-unit-of-work-and-generic-repository-pattern-in-a-web-api-net-core-pro)
+   - [Repository Pattern and Unit of Work](https://enlear.academy/repository-pattern-and-unit-of-work-with-asp-net-core-web-api-6802e1aa4f78)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -283,21 +174,13 @@ I would like to thank...
 
 This project is [MIT](./LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+[MIT license](https://choosealicense.com/licenses/mit/) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-dotnet add AWA.DataAccess package Microsoft.EntityFrameworkCore.Design
-dotnet add AWA.DataAccess package Microsoft.EntityFrameworkCore.SqlServer
-
-dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=AdventureWorks2017; User Id=XXUser;Password=XXPWD;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer --project AWA.DataAccess --output-dir "AWA.Models\Models" --context-dir "AWA.DataAccess\Data" --namespace AWA.Models --context-namespace AWA.DataAccess --context AdventureWorksContext -f --no-onconfiguring
-dotnet tool install --global dotnet-ef
-dotnet tool update --global dotnet-ef 
 
 
 
-https://code-maze.com/paging-aspnet-core-webapi/
-https://code-maze.com/filtering-aspnet-core-webapi/
-https://code-maze.com/searching-aspnet-core-webapi/
-https://code-maze.com/sorting-aspnet-core-webapi/
+
+
