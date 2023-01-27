@@ -28,12 +28,6 @@ and to validate advanced data recovery using paging, filtering, searching and so
 
 # Web API Service:
 
-## DTO Schema:
-![DTO Schema](https://user-images.githubusercontent.com/8497300/212795992-d4e9977b-1cc2-4100-9882-51c7f338142e.png)
-
-## getAllPeople Method:
-![01](https://user-images.githubusercontent.com/8497300/212795860-4446485a-e7c6-43af-9b64-abd4b6ca094a.png)
-
 ## getAdvancedPeople Method:
 ### Paging:
 ![Paging](https://user-images.githubusercontent.com/8497300/212796101-1ad6c6df-c560-47d7-96f1-248b89a9a18a.png)
@@ -62,6 +56,11 @@ and to validate advanced data recovery using paging, filtering, searching and so
 ### Sorting in Postman:
 ![Sorting Postman](https://user-images.githubusercontent.com/8497300/212796630-53a822b7-f87f-495c-8903-24213848a607.png)
 
+## DTO Schema:
+![DTO Schema](https://user-images.githubusercontent.com/8497300/212795992-d4e9977b-1cc2-4100-9882-51c7f338142e.png)
+
+## getAllPeople Method:
+![01](https://user-images.githubusercontent.com/8497300/212795860-4446485a-e7c6-43af-9b64-abd4b6ca094a.png)
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
