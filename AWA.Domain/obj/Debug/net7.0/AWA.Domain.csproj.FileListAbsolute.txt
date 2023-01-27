@@ -1,0 +1,15 @@
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\bin\Debug\net7.0\AWA.Domain.deps.json
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\bin\Debug\net7.0\AWA.Domain.dll
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\bin\Debug\net7.0\AWA.Domain.pdb
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\bin\Debug\net7.0\AWA.Models.dll
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\bin\Debug\net7.0\AWA.Models.pdb
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\obj\Debug\net7.0\AWA.Domain.csproj.AssemblyReference.cache
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\obj\Debug\net7.0\AWA.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\obj\Debug\net7.0\AWA.Domain.AssemblyInfoInputs.cache
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\obj\Debug\net7.0\AWA.Domain.AssemblyInfo.cs
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\obj\Debug\net7.0\AWA.Domain.csproj.CoreCompileInputs.cache
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\obj\Debug\net7.0\AWA.Domain.csproj.CopyComplete
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\obj\Debug\net7.0\AWA.Domain.dll
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\obj\Debug\net7.0\refint\AWA.Domain.dll
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\obj\Debug\net7.0\AWA.Domain.pdb
+C:\Elio\Development\Projects\AdvancedWebAPI\AWA.Domain\obj\Debug\net7.0\ref\AWA.Domain.dll

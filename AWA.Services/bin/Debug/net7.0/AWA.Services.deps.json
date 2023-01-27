@@ -1,0 +1,65 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "AWA.Services/1.0.0": {
+        "dependencies": {
+          "AWA.Domain": "1.0.0",
+          "System.Linq.Dynamic.Core": "1.2.24"
+        },
+        "runtime": {
+          "AWA.Services.dll": {}
+        }
+      },
+      "System.Linq.Dynamic.Core/1.2.24": {
+        "runtime": {
+          "lib/net7.0/System.Linq.Dynamic.Core.dll": {
+            "assemblyVersion": "1.2.24.0",
+            "fileVersion": "1.2.24.0"
+          }
+        }
+      },
+      "AWA.Domain/1.0.0": {
+        "dependencies": {
+          "AWA.Models": "1.0.0"
+        },
+        "runtime": {
+          "AWA.Domain.dll": {}
+        }
+      },
+      "AWA.Models/1.0.0": {
+        "runtime": {
+          "AWA.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AWA.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Linq.Dynamic.Core/1.2.24": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fzE8wSOiDvhs8ROYkfwlw8A8xiw4PnwIu/tAL3MdIJIVmV/KLJqIAGeS20y82kbKPZ5Kp0ShkQolgf6nIAT/Rg==",
+      "path": "system.linq.dynamic.core/1.2.24",
+      "hashPath": "system.linq.dynamic.core.1.2.24.nupkg.sha512"
+    },
+    "AWA.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AWA.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

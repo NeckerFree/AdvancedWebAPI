@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Services\\AWA.Services.csproj": {}
+  },
+  "projects": {
+    "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Domain\\AWA.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Domain\\AWA.Domain.csproj",
+        "projectName": "AWA.Domain",
+        "projectPath": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Domain\\AWA.Domain.csproj",
+        "packagesPath": "C:\\Users\\elio_\\.nuget\\packages\\",
+        "outputPath": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\elio_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Models\\AWA.Models.csproj": {
+                "projectPath": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Models\\AWA.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Models\\AWA.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Models\\AWA.Models.csproj",
+        "projectName": "AWA.Models",
+        "projectPath": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Models\\AWA.Models.csproj",
+        "packagesPath": "C:\\Users\\elio_\\.nuget\\packages\\",
+        "outputPath": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\elio_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Services\\AWA.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Services\\AWA.Services.csproj",
+        "projectName": "AWA.Services",
+        "projectPath": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Services\\AWA.Services.csproj",
+        "packagesPath": "C:\\Users\\elio_\\.nuget\\packages\\",
+        "outputPath": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\elio_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Domain\\AWA.Domain.csproj": {
+                "projectPath": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Domain\\AWA.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.24, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

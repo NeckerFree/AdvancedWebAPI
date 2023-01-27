@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cEGLKIbXU+UeuD8sUW1rUaECf3YCCHPXo+lK+XjtY3LNaXHyu4VayPogy3/JHhwtZSkaeDRdRewah822i2vJkg==",
+  "success": true,
+  "projectFilePath": "C:\\Elio\\Development\\Projects\\AdvancedWebAPI\\AWA.Services\\AWA.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elio_\\.nuget\\packages\\system.linq.dynamic.core\\1.2.24\\system.linq.dynamic.core.1.2.24.nupkg.sha512"
+  ],
+  "logs": []
+}
