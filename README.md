@@ -86,7 +86,7 @@ and to validate advanced data recovery using paging, filtering, searching and so
 ### Key Features <a name="key-features"></a>
 
 - **EF Core Database First**
-- **Unit of Wokt and Repository Pattern**
+- **Unit of Work and Repository Patterns**
 - **Services Dependency Injection**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
