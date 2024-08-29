@@ -116,7 +116,7 @@ In order to run this project you need:
 2. Download and restore the Adventure Works Database according to your SQL Server version
 [Adventure Works DB](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 
-3. Create a User as db_owner of this batabase
+3. Create a User as db_owner of this database
 
 4. Modify the connection string (AdventureWorksConnection) in the file \AWA.MinApi\appsettings.json to point your database
 ### Install
